@@ -26,7 +26,7 @@ sparks = new Spark[100];
 		//3. Iterate through the sparks and initialize each one to a new Spark.
 		//   Make each spark start at the middle bottom of the screen.
 	for(int a = 0; a < sparks.length; a++) {
-		sparks[a] = new Spark(360,480);
+		sparks[a] = new Spark(720,800);
 	}
 	}
 	
@@ -34,7 +34,7 @@ sparks = new Spark[100];
 		//4. Iterate through the sparks and reset their x and y location
 		//   to their original starting point.
 		for(int a = 0; a < sparks.length; a++) {
-			sparks[a] = new Spark(360,480);
+			sparks[a] = new Spark(720,800);
 		}
 	}
 	
@@ -72,10 +72,8 @@ sparks = new Spark[100];
 	public void drawSparks(Graphics g) {
 		//5. Iterate through each spark
 		for(int a = 0; a < sparks.length; a++) {
-			//sparks[a].color = g.setColor();
-			//LEFT OFF HERE
-			//------------------------------------------------------------------------------
-			//------------------------------------------------------------------------------
+			g.setColor(sparks[a].color);
+g.fillOval(sparks[a].x, sparks[a].y, 15, 15);
 			
 		}
 			//6. Set the color to the spark's color with g.setColor()
